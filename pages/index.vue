@@ -1,21 +1,23 @@
 <template>
   <section class="wrapper">
-    <div>
-      <h1 class="title text-center">
-        nuxt-tailwind
-      </h1>
-      <Product />
-      <Product />
-    </div>
+    <main class="font-sans text-grey-darkest tracking-wide flex-auto w-full container max-w-xl mx-auto py-5 md:py-16 px-6">
+      <Intro />
+      <About />
+      <!-- <Product /> -->
+    </main>
   </section>
 </template>
 
 <script>
+import Intro from "@/components/Intro.vue"
+import About from "@/components/About.vue"
 import Product from "@/components/Product.vue"
 
 export default {
   components: {
-    Product
+    Product,
+    Intro,
+    About
   }
 }
 </script>
@@ -24,7 +26,6 @@ export default {
 .wrapper {
   min-height: 100vh;
   margin: 0 auto;
-  background: lightgray;
 
   & .title {
     font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
